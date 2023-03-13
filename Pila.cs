@@ -46,9 +46,19 @@ namespace Torres_de_Hanoi
 
         public void push(Disco d)
         {
-            Elementos.Add(d);
-            Size = Elementos.Count();
-            Top = Elementos.Last().Valor;
+            if (d == null)
+            {
+                Size = 0;
+                Top = 0;
+            }
+            else
+            {
+                Elementos.Add(d);
+                Size = Elementos.Count();
+                Top = Elementos.Last().Valor;
+            }
+            
+            
         }
 
         public Disco pop()
